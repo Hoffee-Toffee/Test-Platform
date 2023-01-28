@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Notes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+"Our proposed digital platform aims to revolutionize the way governments make decisions by using a community-driven, evidence-based approach. By harnessing the power of the scientific method, the platform allows anyone to submit evidence and criticism, ensuring that decisions are made based on the best available information. The platform also includes a funding pool to support research and projects, and constantly improves through the discussion of the algorithms behind it. The ultimate goal is to create a transparent and fair system that is open to all and that encourages participation and community engagement."
 
-## Available Scripts
+The proposal is for a platform that allows for the community as a whole to submit evidence and ideas, with experts and everyday users collaborating to create the best laws and policies. The platform would use three algorithms, the Sci algorithm, the Sort algorithm and the Consensus algorithm, to ensure that the most accurate and reliable information is being used.
 
-In the project directory, you can run:
+The Sci algorithm would analyze research papers and studies admitted to the platform, identifying any weaknesses or problems with the evidence being submitted. This would include checks such as whether a reference is required in a certain section, if a reference is weak, if the sample size is only suitable in certain regions, and if a study backs up a certain claim.
 
-### `npm start`
+The Sort algorithm would use the information from the Sci algorithm to sort the studies and users by evidence and problems found. This would be used as a measure of how trustworthy the users are.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Consensus algorithm would use both the Sci and Sort algorithms to decide when a plan has enough evidence to be accepted as true or the best option. For example, a proposal would be considered the best option for a specific purpose in practice when compared to alternatives.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users would be able to flag any problems they find with the studies or evidence being submitted, and the community would be able to weigh in on the inner workings of the platform just like they can with laws and topics, improving the platform and relying on a loop between the people, evidence, and the platform to make it become more secure and truthful.
 
-### `npm test`
+The reputability of users would be used in the sorting algorithm, but not in the consensus algorithm, as that uses evidence and reason only.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The platform constantly improves itself by including all topics related to its functioning within the platform itself, with the consensus algorithm being used to make decisions on changes to the platform, which are organized and implemented by the community.
 
-### `npm run build`
+Our proposed digital platform aims to revolutionize the way governments make decisions by using a community-driven, evidence-based approach.
+By harnessing the power of the scientific method, the platform allows anyone to submit evidence and criticism, ensuring that decisions are made based on the best available information.
+The platform also includes a funding pool to support research and projects, and constantly improves through the discussion of the algorithms behind it.
+The ultimate goal is to create a transparent and fair system that is open to all and that encourages participation and community engagement.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Design
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pages
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Home
 
-### `npm run eject`
+Search bar - Search for topics, proposals, research, and users
+Tabs - Trending, following, and pinned topics/research/users
+Filters - Sort by date, status, type, source, reputation, and more
+Feed - Shows the results of the search or the newest within the tab chosen
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Topic
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Search bar - Search for topics, proposals, research, and users
+Topic - Shows the topic, description, and tags for the topic
+Tabs - Research, discussion
+Filters - Sort by date, status, type, source, reputation, and more
+Feed - Shows the results of the search or the newest within the tab chosen
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Research
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Research - Shows the research, description, and tags for the research
+Main - Shows the research itself, with the ability to view and add flags to individual sections and lines
+Tabs - Comments, related research
+Filters - Sort by date, status, type, source, reputation, and more
 
-## Learn More
+#### Profile
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Profile - Shows the user's profile, with the ability to follow and message
+Tabs - All, research, comments
+Filters - Sort by date, status, type, source, reputation, and more
+Feed - Shows the results of the search or the newest within the tab chosen
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Elements
 
-### Code Splitting
+Topic - Option to follow or pin to home
+    Research - Option to follow updates
+        Main - Add flag to section or line
+        Comments - Add comment
+            Comment - Reply
+                User - Go to profile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Algorithms
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sci - Analyzes research papers and studies admitted to the platform, identifying any weaknesses or problems with the evidence being submitted.
+Sort - Uses the information from the Sci algorithm to sort the studies and users by evidence and problems found.
+Consensus - Uses both the Sci and Sort algorithms to decide when a plan has enough evidence to be accepted as true or the best option.
