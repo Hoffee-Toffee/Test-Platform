@@ -1,31 +1,37 @@
 import React from "react";
+import { default as Feed } from "./Feed";
+import { useParams } from "react-router";
+
 
 function Topic() {
+  let { topicSlug } = useParams();
+
+  let topic = require("../data.json").topics[topicSlug];
+
   return (
-    <div className="about">
-      <div class="container">
-        <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-            <img
-              class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
-              alt=""
-            />
-          </div>
-          <div class="col-lg-5">
-            <h1 class="font-weight-light">Topic</h1>
-            <p>
-            Search bar - Search for topics, proposals, research, and users
-            Topic - Shows the topic, description, and tags for the topic
-            Tabs - Research, discussion
-            Filters - Sort by date, status, type, source, reputation, and more
-            Feed - Shows the results of the search or the newest within the tab chosen
-            </p>
-          </div>
-        </div>
+    <div className="user">
+      <div class="container profile">
+        <h1 className="mt-5">{topic.name}</h1>
+        <p>{topic.desc}</p>
+
+        <p>
+            <span>Tags: </span>
+            {topic.tags.map((tag, index) => (
+                // Add a comma after each user's name except the last two, which should have "and" before the last name
+                <span>
+                    {tag}
+                    {index < topic.tags.length - 2 ? ", " : ""}
+                    {index == topic.tags.length - 2 ? " and " : ""}
+                </span>
+            ))}
+        </p>
       </div>
+      {/* Pass the topic's slug to the Feed component to filter the posts by the topic */}
+      <Feed topic={topicSlug} />
     </div>
   );
+
+
 }
 
 export default Topic;

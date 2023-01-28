@@ -5,16 +5,27 @@ function Feed() {
   let props = arguments[0];
   
   let user = parseInt(props.user);
-  
   if (user) console.log("User: " + user);
+
+  let topic = parseInt(props.topic);
+  if (topic) console.log("Topic: " + topic);
 
   let posts = require("../data.json").posts;
   let users = require("../data.json").users;
   let topics = require("../data.json").topics;
 
+  var msg = undefined;
+
   // Filter the posts by the user if the user param is present
   if (user) {
     posts = posts.filter((post) => post.authors.includes(user));
+    msg = `${users[user].name}'${users[user].name.endsWith("s") ? "" : "s"} posts`;
+  }
+
+  // Filter the posts by the topic if the topic param is present
+  if (topic) {
+    posts = posts.filter((post) => post.topics.includes(topic));
+    msg = `Posts about ${topics[topic].name}`;
   }
 
   var toReturn = []
@@ -85,7 +96,7 @@ function Feed() {
 
   return <div className="feed">
     <div class="container">
-    <h1 className="text-center mt-5">{(user !== undefined) ? `${users[user].name}'${users[user].name.endsWith("s") ? "" : "s"} Posts` : "Feed"}</h1>
+    <h1 className="text-center mt-5">{(msg !== undefined) ? msg : "Feed"}</h1>
     {toReturn}
     </div>
   </div>;
