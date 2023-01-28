@@ -63,10 +63,36 @@ function Posts() {
 
   var toReturn = [];
   posts.forEach((post) => {
+    // Use the current time to get how long ago the post was published or updated
+    var now = new Date();
+    var published = new Date(post.published);
+    var updated = new Date(post.updated);
+
+    var timeDiff = Math.abs(now.getTime() - published.getTime());
+
+    // Get the number of years, months, days, hours, minutes, and seconds since the post was published
+    var times = {
+      years: Math.floor(timeDiff / (1000 * 3600 * 24 * 365)),
+      months: Math.floor(timeDiff / (1000 * 3600 * 24 * 30)),
+      days: Math.floor(timeDiff / (1000 * 3600 * 24)),
+      hours: Math.floor(timeDiff / (1000 * 3600)),
+      minutes: Math.floor(timeDiff / (1000 * 60)),
+      seconds: Math.floor(timeDiff / 1000),
+    };
+
+    // Get the first time unit that is greater than 1 or say "just now" if none are
+    // Loop though each property in the times object and return the first one that is greater than 1
+
+    var publishedTime = Object.keys(times).find((key) => times[key] > 1);
+    publishedTime = publishedTime == undefined ? "just now" : `${times[publishedTime]} ${publishedTime} ago`;
+
+    var updatedTime = Object.keys(times).find((key) => times[key] > 1);
+    updatedTime = updatedTime == undefined ? "just now" : `${times[updatedTime]} ${updatedTime} ago`;
+
     toReturn.push(
       <div className="post">
         <h2>
-          <a href={"/post/" + post.id}>{post.title}</a>
+          <a href={"/feed/" + post.id}>{post.title}</a>
         </h2>
         <p>
           <span>By </span>
@@ -79,7 +105,8 @@ function Posts() {
             </span>
           ))}
         </p>
-        <p>{post.published}</p>
+        <p>Last updated {updatedTime}</p>
+        <p>Published {publishedTime}</p>
         <p>
           <span>Topics: </span>
           {post.topics.map((topic, index) => (
