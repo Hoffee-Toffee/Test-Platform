@@ -1,30 +1,25 @@
 import React from "react";
+import { default as Feed } from "./Feed";
+import { useParams } from "react-router";
+
 
 function User() {
+  let { userSlug } = useParams();
+
+  let user = require("../data.json").users[userSlug];
+
   return (
     <div className="user">
-      <div class="container">
-        <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-            <img
-              class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
-              alt=""
-            />
-          </div>
-          <div class="col-lg-5">
-            <h1 class="font-weight-light">User</h1>
-            <p>
-            Profile - Shows the user's profile, with the ability to follow and message
-            Tabs - All, research, comments
-            Filters - Sort by date, status, type, source, reputation, and more
-            Feed - Shows the results of the search or the newest within the tab chosen
-            </p>
-          </div>
-        </div>
+      <div class="container profile">
+        <h1 className="mt-5">{user.name}</h1>
+        <p>{user.name}'{user.name.endsWith("s") ? "" : "s"} profile information will go here</p>
       </div>
+      {/* Pass the user's slug to the Feed component to filter the posts by the user */}
+      <Feed user={userSlug} />
     </div>
   );
+
+
 }
 
 export default User;

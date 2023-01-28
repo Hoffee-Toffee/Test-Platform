@@ -25,7 +25,7 @@ ReactDOM.render(
       <Route path="/contact" element={<Contact />} />
       <Route path="/research" element={<Research />} />
       <Route path="/topic" element={<Topic />} />
-      <Route path="/user" element={<User />} />
+      <Route path="/user/:userSlug" element={<User />} />
       <Route path="/" element={<Home />} />
       <Route path="*" element={<NoPage />} />
     </Routes>
