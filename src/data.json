@@ -1,29 +1,29 @@
 {
     "users": [
         {
-            "id": 1,
+            "id": 0,
             "name": "John Doe"
         },
         {
-            "id": 2,
+            "id": 1,
             "name": "Jane Doe"
         },
         {
-            "id": 3,
+            "id": 2,
             "name": "Mike Johnson"
         },
         {
-            "id": 4,
+            "id": 3,
             "name": "Sara Lee"
         },
         {
-            "id": 5,
+            "id": 4,
             "name": "Alpha Data, Beta Fuzz"
         }
     ],
     "topics": [
         {
-            "id": 1,
+            "id": 0,
             "name": "Artificial Intelligence",
             "desc": "Artificial intelligence (AI) is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans and other animals. In computer science AI research is defined as the study of \"intelligent agents\": any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals.",
             "tags": [
@@ -34,7 +34,7 @@
             ]
         },
         {
-            "id": 2,
+            "id": 1,
             "name": "Depression Epidemic",
             "desc": "Depression is a common and serious medical illness that negatively affects how you feel, the way you think and how you act. Fortunately, it is also treatable. Depression causes feelings of sadness and/or a loss of interest in activities once enjoyed. It can lead to a variety of emotional and physical problems and can decrease a person's ability to function at work and at home.",
             "tags": [
@@ -46,7 +46,7 @@
             ]
         },
         {
-            "id": 3,
+            "id": 2,
             "name": "Climate Change and Global Warming",
             "desc": "Climate change is a change in the statistical distribution of weather patterns when that change lasts for an extended period of time (i.e., decades to millions of years). Climate change may refer to a change in weather conditions, or in the time variation of weather around longer-term average conditions (i.e., climate variability).",
             "tags": [
@@ -58,46 +58,46 @@
     ],
     "posts": [
         {
-            "id": 1,
+            "id": 0,
             "title": "ChatGPT is revolutionizing education",
             "last_updated": "2023-01-15T13:45:30.000Z",
             "published": "2023-01-15T13:45:30.000Z",
             "content": "ChatGPT is a chatbot that uses GPT-3 to answer questions about a variety of topics. Due to students using it to cheat on their homework, it has sparked a change in the archaic education systems of the modern world...",
             "authors": [
-                1
+                0
             ],
             "topics": [
-                1
+                0
             ],
             "notes": null
         },
         {
-            "id": 2,
+            "id": 1,
             "title": "The rise of AI in the workplace",
             "last_updated": "2023-01-15T13:45:30.000Z",
             "published": "2023-01-15T13:45:30.000Z",
             "content": "AI is becoming more and more prevalent in the workplace. It is being used to automate tasks, and to help with decision making. It is also being used to help with the hiring process, and to help with the training process.",
             "authors": [
-                2
+                1
             ],
             "topics": [
-                1
+                0
             ],
             "notes": null
         },
         {
-            "id": 3,
+            "id": 2,
             "title": "Breakthrough in using AI for treating depression",
             "last_updated": "2023-01-15T13:45:30.000Z",
             "published": "2023-01-15T13:45:30.000Z",
             "content": "A new study has shown that AI can be used to help treat depression. It can be used to help with the diagnosis of depression, and to help with the treatment of depression.",
             "authors": [
-                1,
-                3
+                0,
+                2
             ],
             "topics": [
-                1,
-                2
+                0,
+                1
             ],
             "notes": [
                 {
@@ -105,104 +105,105 @@
                     "start": 2,
                     "end": 11,
                     "content": "No link or reference to the study",
-                    "author": 4
+                    "author": 3
                 }
             ]
         },
         {
-            "id": 4,
+            "id": 3,
             "title": "Climate Change: Impacts and Mitigation",
             "last_updated": "2023-01-17T09:36:21.000Z",
             "published": "2023-01-15T13:45:30.000Z",
             "content": "# Climate Change: Impacts and Mitigation Strategies\n\nClimate change, caused by the burning of fossil fuels and other human activities, is one of the most pressing environmental issues facing our planet today. The effects of climate change are already being felt around the world, with rising temperatures, more frequent extreme weather events, and rising sea levels. In this paper, we will discuss the impacts of climate change and some of the mitigation strategies that can be implemented to address this global crisis.\n\n## Impacts of Climate Change\n\nClimate change has a wide range of impacts on the natural environment, human health, and the economy. Some of the key impacts include:\n\n* Rising temperatures: Climate change is causing global temperatures to rise, which can lead to heat waves, droughts, and other extreme weather events. According to the Intergovernmental Panel on Climate Change (IPCC), it is extremely likely that human activities, particularly the burning of fossil fuels, are the dominant cause of this warming. [1]\n\n* Sea level rise: As the Earth's temperature rises, ice sheets and glaciers are melting. This is causing sea levels to rise, which can lead to coastal flooding and erosion. According to NASA, global sea level has risen by about 8 inches (21 cm) since 1880. [2]\n\n* Extreme weather events: Climate change is leading to more frequent and severe extreme weather events, such as hurricanes, floods, and droughts. A study published in Nature Climate Change found that human-caused climate change has made heatwaves in Australia more likely and more severe. [3]\n\n* Biodiversity loss: Climate change is causing changes in the distribution and abundance of species, which can lead to declines in biodiversity. A study published in the journal Nature found that climate change is causing species to shift their ranges, with some species moving towards the poles and others towards the equator. [4]\n\n* Health impacts: Climate change can have a range of health impacts, including increased air pollution, spread of disease, and heat-related illnesses. According to the World Health Organization, climate change is expected to cause approximately 250,000 additional deaths per year between 2030 and 2050. [5]\n\n## Mitigation Strategies\n\nTo address the impacts of climate change, it is crucial that we take action to reduce our greenhouse gas emissions and transition to a low-carbon economy. Some of the key mitigation strategies that can be implemented include:\n\n* Renewable energy: Transitioning to renewable energy sources, such as solar and wind power, can help to reduce greenhouse gas emissions and decrease our dependence on fossil fuels. According to the International Energy Agency, renewable energy is projected to become the second-largest source of electricity generation by 2025. [6]\n\n* Energy efficiency: Improving energy efficiency in buildings, transportation, and industry can help to reduce energy consumption and lower emissions. According to the U.S. Energy Information Administration, energy efficiency is projected to be the largest contributor to demand-side emissions reductions in the United States through 2050. [7]\n\n* Carbon pricing: Implementing a carbon pricing system, such as a carbon tax or cap-and-trade, can provide a financial incentive for businesses and individuals to reduce their emissions. According to a report from the World Bank, carbon pricing can generate revenue for governments and lower emissions in an efficient and cost-effective way. [8]\n\n* Transportation: Encouraging the use of low-carbon transportation options, such as electric cars and public transit, can help to reduce emissions from the transportation sector. According to the International Energy Agency, electric cars and buses are expected to account for 30% of global light-duty vehicle sales by 2030. [9]\n\n* Reforestation: Restoring forests and other ecosystems can help to remove carbon dioxide from the atmosphere and store it in the soil. According to the United Nations, reforestation can help to reduce emissions by 2.5 gigatons of carbon dioxide per year by 2030. [10]\n\n## Conclusion\n\nClimate change is a global crisis that requires immediate action. The impacts of climate change are already being felt around the world, with rising temperatures, more frequent extreme weather events, and rising sea levels. To address this crisis, we must take action to reduce our greenhouse gas emissions and transition to a low-carbon economy. By implementing mitigation strategies such as renewable energy, energy efficiency, carbon pricing, transportation, and reforestation, we can mitigate the impacts of climate change and ensure a sustainable future for our planet.\n\nReferences:\n    \n    [1] https://www.ipcc.ch/sr15/\n    \n    [2] https://climate.nasa.gov/vital-signs/sea-level/\n    \n    [3] https://www.nature.com/articles/s41558-020-00851-8\n    \n    [4] https://www.nature.com/articles/s41586-020-2649-2\n    \n    [5] https://www.who.int/news-room/fact-sheets/detail/climate-change-and-health\n    \n    [6] https://www.iea.org/reports/renewables-2019\n    \n    [7] https://www.eia.gov/outlooks/aeo/pdf/0383(2019).pdf\n    \n    [8] https://www.worldbank.org/en/topic/climatechange/publication/carbon-pricing\n    \n    [9] https://www.iea.org/reports/global-ev-outlook-2019\n    \n    [10] https://www.unenvironment.org/resources/report/forests-and-climate-change",
             "authors": [
-                3,
-                4
+                2,
+                3
             ],
             "topics": [
-                3
+                2
             ],
             "notes": null
         },
         {
-            "id": 5,
+            "id": 4,
             "title": "AI in the fight against Climate Change",
             "last_updated": "2023-01-17T09:36:21.000Z",
             "published": "2023-01-15T13:45:30.000Z",
             "content": "# AI in the fight against Climate Change\n\nThe fight against climate change is one of the most pressing issues facing our planet today. The effects of climate change are already being felt around the world, with rising temperatures, more frequent extreme weather events, and rising sea levels. In this paper, we will discuss the use of artificial intelligence (AI) in the fight against climate change.\n\n## AI in Climate Change Research\n\nAI can be used to analyze large amounts of data and identify patterns that can help to better understand the causes and impacts of climate change. For example, researchers at the University of California, Berkeley, used AI to analyze satellite data and identify the locations of more than 1.5 billion trees around the world. [1] This information can be used to better understand the effects of deforestation on climate change.\n\nAI can also be used to analyze climate models and identify the most effective strategies for reducing greenhouse gas emissions. For example, researchers at the University of California, Berkeley, used AI to analyze climate models and identify the most effective strategies for reducing greenhouse gas emissions. [2] This information can be used to develop more effective climate change mitigation strategies.\n\n## AI in Climate Change Mitigation\n\nAI can be used to develop more effective climate change mitigation strategies. For example, researchers at the University of California, Berkeley, used AI to analyze climate models and identify the most effective strategies for reducing greenhouse gas emissions. [3] This information can be used to develop more effective climate change mitigation strategies.\n\nAI can also be used to develop more effective climate change adaptation strategies. For example, researchers at the University of California, Berkeley, used AI to analyze climate models and identify the most effective strategies for reducing greenhouse gas emissions. [4] This information can be used to develop more effective climate change adaptation strategies.\n\n## Conclusion\n\nThe fight against climate change is one of the most pressing issues facing our planet today. The effects of climate change are already being felt around the world, with rising temperatures, more frequent extreme weather events, and rising sea levels. AI can be used to analyze large amounts of data and identify patterns that can help to better understand the causes and impacts of climate change. AI can also be used to develop more effective climate change mitigation and adaptation strategies. By using AI in the fight against climate change, we can help to protect our planet and ensure a sustainable future for future generations.\n\n ## References\n\n[1] [https://www.nature.com/articles/s41586-019-1923-7](https://www.nature.com/articles/s41586-019-1923-7)\n\n[2] [https://www.nature.com/articles/s41586-019-1923-7](https://www.nature.com/articles/s41586-019-1923-7)\n\n[3] [https://www.nature.com/articles/s41586-019-1923-7](https://www.nature.com/articles/s41586-019-1923-7)\n\n[4] [https://www.nature.com/articles/s41586-019-1923-7](https://www.nature.com/articles/s41586-019-1923-7)\n",
             "authors": [
-                1,
-                4
+                0,
+                2,
+                3
             ],
             "topics": [
-                1,
-                3
+                0,
+                2
             ],
             "notes": null
         },
         {
-            "id": 6,
+            "id": 5,
             "title": "Gleep Glorp Flarpensten",
             "last_updated": "2023-01-17T09:36:21.000Z",
             "published": "2023-01-15T13:45:30.000Z",
             "content": "This is a placeholder for a paper that has been conducted in the Arcturian system, however, the paper has not yet been translated into English.  We will update this paper as soon as the translation from Arcturian to English is complete.",
             "authors": [
-                5
+                4
             ],
             "topics": [
-                2
+                1
             ],
             "notes": null
         }
     ],
     "comments": [
         {
-            "id": 1,
+            "id": 0,
             "content": "Amazing paper! I learned so much about climate change from this paper!",
+            "author": 2,
+            "parent": ["paper", 4]
+        },
+        {
+            "id": 1,
+            "content": "My grandma would love this paper! Not that her medication is working, but she would love it.",
             "author": 3,
-            "parent": ["paper", 5]
+            "parent": ["paper", 1]
         },
         {
             "id": 2,
-            "content": "My grandma would love this paper! Not that her medication is working, but she would love it.",
-            "author": 4,
-            "parent": ["paper", 2]
+            "content": "This topic is so important! I'm glad there is a topic on it.",
+            "author": 1,
+            "parent": ["topic", 2]
         },
         {
             "id": 3,
-            "content": "This topic is so important! I'm glad there is a topic on it.",
+            "content": "Oh no! I'm so sorry to hear that! I hope your grandma's situation improves soon!",
             "author": 1,
-            "parent": ["topic", 3]
+            "parent": ["comment", 1]
         },
         {
             "id": 4,
-            "content": "Oh no! I'm so sorry to hear that! I hope your grandma's situation improves soon!",
-            "author": 2,
-            "parent": ["comment", 2]
+            "content": "You don't have to worry anymore, she's dead now :)",
+            "author": 3,
+            "parent": ["comment", 3]
         },
         {
             "id": 5,
-            "content": "You don't have to worry anymore, she's dead now :)",
-            "author": 4,
-            "parent": ["comment", 4]
+            "content": "I speak fluent Arcturian, an Uber Eats driver said his uncle was from Arcturus. I can send it to him and he can translate it for you.",
+            "author": 2,
+            "parent": ["paper", 5]
         },
         {
             "id": 6,
-            "content": "I speak fluent Arcturian, an Uber Eats driver said his uncle was from Arcturus. I can send it to him and he can translate it for you.",
-            "author": 3,
-            "parent": ["paper", 6]
+            "content": "That would be great! I would love to read this paper!",
+            "author": 0,
+            "parent": ["comment", 5]
         },
         {
             "id": 7,
-            "content": "That would be great! I would love to read this paper!",
-            "author": 1,
-            "parent": ["comment", 6]
-        },
-        {
-            "id": 8,
             "content": "I'm sorry, but I don't think that's a good idea. I don't think it's a good idea to send a paper to an Uber Eats driver.",
-            "author": 2,
-            "parent": ["comment", 7]
+            "author": 0,
+            "parent": ["comment", 6]
         }
     ]
 }
