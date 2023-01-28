@@ -14,7 +14,9 @@ function Comment() {
     toReturn.push(
         <div className="card">
             <div className="card-body">
-                <h5 className="card-title">{users[comment.author].name}</h5>
+                <h5 className="card-title">
+                    <a href={`/user/${comment.author}`}>{users[comment.author].name}</a>
+                </h5>
                 <p className="card-text">{comment.content}</p>
             </div>
         </div>

@@ -1,3 +1,12 @@
 #root > *:nth-child(2) {
     padding-bottom: 3em;
 }
+
+.card {
+    margin-top: 1em;
+}
+
+.col-12 {
+    padding-right: 0;
+    border-left: 1px solid #e9ecef;
+}

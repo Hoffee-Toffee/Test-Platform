@@ -20,7 +20,8 @@ function Comments() {
 
   let users = require("../data.json").users;
   let comments = require("../data.json").comments;
-
+  let allComments = require("../data.json").comments;
+  
   var msg = "Comments";
 
   // Filter the comments by the user if the user param is present
@@ -46,6 +47,23 @@ function Comments() {
 
   var toReturn = []
 
+  if (msg == "Comments") {
+    var checkArr = comments;
+    var count = 0;
+
+    while (checkArr.length > 0) {
+        console.log(checkArr)
+        // Add the replies to the first comment in the array to the array
+        checkArr = checkArr.concat(allComments.filter((c) => c.parent == `comment${checkArr[0].id}`));
+
+        // Remove the first comment from the array
+        checkArr.shift();
+        count++;
+    }
+
+    msg += ` (${count})`;
+  }
+
   comments.forEach((comment) => {
     console.log(comment);
     toReturn.push(<Comment comment={comment.id} />);
@@ -55,6 +73,8 @@ function Comments() {
     <div className="comments">
         <div className="container">
             <h2 className="mt-5 font-weight-light">{msg}</h2>
+            {/* Check if count is zero */}
+            {count == 0 && <p className="lead text-muted">No comments to show</p>}
             <div className="row">
                 {toReturn}
             </div>
