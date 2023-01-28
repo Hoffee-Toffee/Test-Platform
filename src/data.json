@@ -161,49 +161,49 @@
             "id": 0,
             "content": "Amazing paper! I learned so much about climate change from this paper!",
             "author": 2,
-            "parent": ["paper", 4]
+            "parent": "post4"
         },
         {
             "id": 1,
             "content": "My grandma would love this paper! Not that her medication is working, but she would love it.",
             "author": 3,
-            "parent": ["paper", 1]
+            "parent": "post1"
         },
         {
             "id": 2,
             "content": "This topic is so important! I'm glad there is a topic on it.",
             "author": 1,
-            "parent": ["topic", 2]
+            "parent": "topic2"
         },
         {
             "id": 3,
             "content": "Oh no! I'm so sorry to hear that! I hope your grandma's situation improves soon!",
             "author": 1,
-            "parent": ["comment", 1]
+            "parent": "comment1"
         },
         {
             "id": 4,
             "content": "You don't have to worry anymore, she's dead now :)",
             "author": 3,
-            "parent": ["comment", 3]
+            "parent": "comment3"
         },
         {
             "id": 5,
             "content": "I speak fluent Arcturian, an Uber Eats driver said his uncle was from Arcturus. I can send it to him and he can translate it for you.",
             "author": 2,
-            "parent": ["paper", 5]
+            "parent": "post5"
         },
         {
             "id": 6,
             "content": "That would be great! I would love to read this paper!",
             "author": 0,
-            "parent": ["comment", 5]
+            "parent": "comment5"
         },
         {
             "id": 7,
             "content": "I'm sorry, but I don't think that's a good idea. I don't think it's a good idea to send a paper to an Uber Eats driver.",
             "author": 0,
-            "parent": ["comment", 6]
+            "parent": "comment6"
         }
     ]
 }

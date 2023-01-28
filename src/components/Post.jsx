@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router";
+import { default as Comments } from "./Comments";
 
 function Post() {
   let { postSlug } = useParams();
@@ -7,7 +8,6 @@ function Post() {
   let post = require("../data.json").posts[postSlug];
   let users = require("../data.json").users;
   let topics = require("../data.json").topics;
-  let comments = require("../data.json").comments;
 
   // Use the current time to get how long ago the post was published or updated
   var now = new Date();
@@ -78,6 +78,7 @@ function Post() {
         {/* Show the content as a paragraph for each \n in the content */}
         <p>{post.content.split("\n").map((paragraph) => <p>{paragraph}</p>)}</p>
       </div>
+      <Comments post={postSlug} />
     </div>
   );
 }
