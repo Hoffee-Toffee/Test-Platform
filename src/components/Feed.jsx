@@ -85,7 +85,7 @@ function Feed() {
 
   return <div className="feed">
     <div class="container">
-    <h1 className="text-center mt-5">{user ? `${users[user].name}'${users[user].name.endsWith("s") ? "" : "s"} Posts` : "Feed"}</h1>
+    <h1 className="text-center mt-5">{(user !== undefined) ? `${users[user].name}'${users[user].name.endsWith("s") ? "" : "s"} Posts` : "Feed"}</h1>
     {toReturn}
     </div>
   </div>;
