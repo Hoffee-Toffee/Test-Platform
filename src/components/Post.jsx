@@ -1,15 +1,13 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router";
 
-// export default Post;
-
 function Post() {
   let { postSlug } = useParams();
 
-  let post = require("../../data.json").posts[postSlug];
-  let users = require("../../data.json").users;
-  let topics = require("../../data.json").topics;
-  let comments = require("../../data.json").comments;
+  let post = require("../data.json").posts[postSlug];
+  let users = require("../data.json").users;
+  let topics = require("../data.json").topics;
+  let comments = require("../data.json").comments;
 
   // Use the current time to get how long ago the post was published or updated
   var now = new Date();

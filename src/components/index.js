@@ -1,6 +1,5 @@
-export { default as Feed } from "./feed/Feed";
-export { default as Posts } from "./feed/Posts";
-export { default as Post } from "./feed/Post";
+export { default as Feed } from "./Feed";
+export { default as Post } from "./Post";
 export { default as NoPage } from "./404";
 export { default as About } from "./About";
 export { default as Contact } from "./Contact";

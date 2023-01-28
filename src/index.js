@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
   Feed,
   Post,
-  Posts,
   NoPage,
   About,
   Contact,
@@ -20,10 +19,8 @@ ReactDOM.render(
   <Router>
     <Navigation />
     <Routes>
-      <Route path="/feed" element={<Feed />}>
-        <Route path="" element={<Posts />} />
-        <Route path=":postSlug" element={<Post />} />
-      </Route>
+      <Route path="/feed" element={<Feed />} />
+      <Route path="/post/:postSlug" element={<Post />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/research" element={<Research />} />
