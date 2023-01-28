@@ -17,13 +17,13 @@ function Feed() {
   var msg = undefined;
 
   // Filter the posts by the user if the user param is present
-  if (user) {
+  if (user || user == 0) {
     posts = posts.filter((post) => post.authors.includes(user));
     msg = `${users[user].name}'${users[user].name.endsWith("s") ? "" : "s"} posts`;
   }
 
   // Filter the posts by the topic if the topic param is present
-  if (topic) {
+  if (topic || topic == 0) {
     posts = posts.filter((post) => post.topics.includes(topic));
     msg = `Posts about ${topics[topic].name}`;
   }

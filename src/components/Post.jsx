@@ -4,7 +4,7 @@ import { default as Comments } from "./Comments";
 
 function Post() {
   let { postSlug } = useParams();
-
+  
   let post = require("../data.json").posts[postSlug];
   let users = require("../data.json").users;
   let topics = require("../data.json").topics;

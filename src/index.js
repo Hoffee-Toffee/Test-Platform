@@ -23,7 +23,6 @@ ReactDOM.render(
       <Route path="/post/:postSlug" element={<Post />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/research" element={<Research />} />
       <Route path="/topic/:topicSlug" element={<Topic />} />
       <Route path="/user/:userSlug" element={<User />} />
       <Route path="/" element={<Home />} />
