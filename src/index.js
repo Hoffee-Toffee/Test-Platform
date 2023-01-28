@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
-  Blog,
+  Feed,
   Post,
   Posts,
   NoPage,
@@ -20,7 +20,7 @@ ReactDOM.render(
   <Router>
     <Navigation />
     <Routes>
-      <Route path="/blog" element={<Blog />}>
+      <Route path="/feed" element={<Feed />}>
         <Route path="" element={<Posts />} />
         <Route path=":postSlug" element={<Post />} />
       </Route>
