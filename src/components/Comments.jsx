@@ -54,7 +54,7 @@ function Comments() {
   return (
     <div className="comments">
         <div className="container">
-            <h1 className="mt-5">{msg}</h1>
+            <h2 className="mt-5 font-weight-light">{msg}</h2>
             <div className="row">
                 {toReturn}
             </div>

@@ -10,6 +10,8 @@ function Feed() {
   let topic = parseInt(props.topic);
   if (topic) console.log("Topic: " + topic);
 
+  let small = props.small == true;
+
   let posts = require("../data.json").posts;
   let users = require("../data.json").users;
   let topics = require("../data.json").topics;
@@ -29,6 +31,12 @@ function Feed() {
   }
 
   var toReturn = []
+
+  if (small) {
+    toReturn.push(<h2 className="text-center mt-5 font-weight-light">{(msg !== undefined) ? msg : "Feed"}</h2>);
+  } else {
+    toReturn.push(<h1 className="text-center mt-5 font-weight-light">{(msg !== undefined) ? msg : "Feed"}</h1>);
+  }
 
   posts.forEach((post) => {
     // Use the current time to get how long ago the post was published or updated
@@ -96,7 +104,6 @@ function Feed() {
 
   return <div className="feed">
     <div class="container">
-    <h1 className="text-center mt-5">{(msg !== undefined) ? msg : "Feed"}</h1>
     {toReturn}
     </div>
   </div>;

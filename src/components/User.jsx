@@ -11,11 +11,11 @@ function User() {
   return (
     <div className="user">
       <div class="container profile">
-        <h1 className="mt-5">{user.name}</h1>
+        <h1 className="mt-5 font-weight-light">{user.name}</h1>
         <p>{user.name}'{user.name.endsWith("s") ? "" : "s"} profile information will go here</p>
       </div>
       {/* Pass the user's slug to the Feed component to filter the posts by the user */}
-      <Feed user={userSlug} />
+      <Feed user={userSlug} small={true} />
     </div>
   );
 

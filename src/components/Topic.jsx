@@ -11,7 +11,7 @@ function Topic() {
   return (
     <div className="user">
       <div class="container profile">
-        <h1 className="mt-5">{topic.name}</h1>
+        <h1 className="mt-5 font-weight-light">{topic.name}</h1>
         <p>{topic.desc}</p>
 
         <p>
@@ -27,7 +27,7 @@ function Topic() {
         </p>
       </div>
       {/* Pass the topic's slug to the Feed component to filter the posts by the topic */}
-      <Feed topic={topicSlug} />
+      <Feed topic={topicSlug} small={true} />
     </div>
   );
 

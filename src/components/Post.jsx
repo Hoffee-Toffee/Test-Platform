@@ -50,7 +50,7 @@ function Post() {
   return (
     <div className="home">
       <div class="container">
-        <h1 className="mt-5">{post.title}</h1>
+        <h1 className="mt-5 font-weight-light">{post.title}</h1>
         <p>
           <span>By </span>
           {post.authors.map((user, index) => (
