@@ -1,3 +1,95 @@
+/* DodgerBlue, Gold, ForestGreen, RebeccaPurple */
+:root {
+    --main: RebeccaPurple;
+    --link: DodgerBlue;
+    --link-hover: ForestGreen;
+    --menu-link: Gold;
+}
+
+/* Dark Mode */
+html.darkMode, html.darkMode #root {
+    background-color: #1a1a1a;
+    color: #f8f9fa;
+}
+
+html.darkMode .navbar a {
+    color: #f8f9fa;
+}
+
+html.darkMode .card {
+    background-color: #1a1a1a;
+    border-color: #f8f9fa;
+}
+
+html.darkMode .col-12 {
+    border-left: 1px solid #f8f9fa;
+}
+
+
+#nav-toggle {
+    display: none;
+    right: 0;
+}
+
+#nav-toggle:checked ~ nav {
+    opacity: 1;
+    right: 0;
+}
+
+#nav-toggle:checked ~ nav::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+#nav-toggle:checked ~ nav::after {
+    right: 9em;
+}
+
+#nav-toggle:checked ~ nav ul li::after {
+    display: none;
+}
+
+#hamburger {
+    position: absolute;
+    top: 1.2em;
+    right: 1.2em;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    color: white;
+    z-index: 2;
+}
+
+#hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background: #ccc;
+    transition: 0.5s ease-out;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#nav-toggle:checked ~ #hamburger .bar {
+    background: white;
+}
+
+
+#nav-toggle:checked ~ #hamburger .bar:nth-child(1) {
+    transform: translateY(8.5px) rotate(180deg);
+}
+
+#nav-toggle:checked ~ #hamburger .bar:nth-child(2) {
+    transform: scaleX(0) translateX(-100%);
+}
+
+#nav-toggle:checked ~ #hamburger .bar:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-180deg);
+}
+
 #root > *:nth-child(2) {
     padding-bottom: 3em;
 }
@@ -9,4 +101,90 @@
 .col-12 {
     padding-right: 0;
     border-left: 1px solid #e9ecef;
+}
+
+.bg-dark {
+    background-color: var(--main) !important;
+}
+
+a {
+    color: var(--link);
+    transition: 0.1s;
+}
+
+a::after { /* This is the underline that appears when you hover over a link */
+    content: "";
+    display: block;
+    margin-left: 100%;
+    width: 0;
+    height: 2px;
+    transition: 0.25s;
+    background-color: var(--link-hover);
+}
+
+a:hover::after { 
+    width: 100%;
+    transition: width 0.25s;
+    margin-left: 0%;
+}
+
+a {
+    display: inline-block;
+    color: var(--link);
+    transition: 0.25s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: none;
+}
+
+.navbar a::after {
+    background-color: var(--menu-link);
+}
+
+/* For mobile */
+@media (max-width: 500px) {
+    /* Turn nav ul into menu */
+    #nav-toggle ~ .navbar-nav {
+        display: flex;
+        position: absolute;
+        width: 0;
+        height: 11em;
+        top: 3.5em;
+        right: 0em;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: var(--main);
+        transition: 0.5s;
+        pointer-events: none;
+        overflow: hidden;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    #nav-toggle ~ .navbar-nav li {
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: opacity 0.5s, transform 0.5s;
+        margin-right: 0.7em;
+    }
+
+    /* Show hamburger menu */
+    #hamburger {
+        display: flex;
+    }
+
+    /* Show nav ul */
+    #nav-toggle:checked ~ .navbar-nav {
+        width: 7em;
+        pointer-events: auto;
+    }
+
+    #nav-toggle:checked ~ .navbar-nav > li {
+        transform: translateX(0%);
+        opacity: 1;
+        transition: opacity 0.5s, transform 0.5s;
+    }
 }

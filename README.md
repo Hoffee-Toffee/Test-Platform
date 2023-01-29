@@ -68,3 +68,9 @@ Topic - Option to follow or pin to home
 Sci - Analyzes research papers and studies admitted to the platform, identifying any weaknesses or problems with the evidence being submitted.
 Sort - Uses the information from the Sci algorithm to sort the studies and users by evidence and problems found.
 Consensus - Uses both the Sci and Sort algorithms to decide when a plan has enough evidence to be accepted as true or the best option.
+
+### Color Scheme
+
+Primary - #1E90FF (Dodger Blue) Symbolic of the sky, the color of the future, and the color of the ocean.
+Secondary - #FF4500 (Orange Red) Symbolic of the sun, the color of fire, and the color of blood.
+Tertiary - #FFD700 (Gold) Also symbolic of the sun, the color of fire, and the color of gold.

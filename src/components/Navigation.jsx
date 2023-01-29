@@ -10,6 +10,12 @@ function Navigation() {
             Test Platform
           </NavLink>
           <div>
+            <input type="checkbox" id="nav-toggle"></input>
+            <label for="nav-toggle" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">
