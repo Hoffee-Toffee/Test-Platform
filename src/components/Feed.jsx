@@ -66,38 +66,42 @@ function Feed() {
     updatedTime = updatedTime == undefined ? "just now" : `${times[updatedTime]} ${updatedTime} ago`;
 
     toReturn.push(
-      <div className="post">
-        <h2>
-          <a href={"/post/" + post.id}>{post.title}</a>
-        </h2>
-        <p>
-          <span>By </span>
-          {post.authors.map((user, index) => (
-            // Add a comma after each user's name except the last two, which should have "and" before the last name
-            <span>
-              <a href={"/user/" + users[user].id}>{users[user].name}</a>
-              {index < post.authors.length - 2 ? ", " : ""}
-              {index == post.authors.length - 2 ? " and " : ""}
-            </span>
-          ))}
-        </p>
-        <p>Last updated {updatedTime}</p>
-        <p>Published {publishedTime}</p>
-        <p>
-          <span>Topics: </span>
-          {post.topics.map((topic, index) => (
-            // Add a comma after each topic except the last two, which should have "and" before the last topic
-            <span>
-              <a href={"/topic/" + topics[topic].id}>{topics[topic].name}</a>
-              {index < post.topics.length - 2 ? ", " : ""}
-              {index == post.topics.length - 2 ? " and " : ""}
-            </span>
-          ))}
-        </p>
-        <p>
-          {post.content.substring(0, 100)}
-          {post.content.length > 100 ? "..." : ""}
-        </p>
+      <div className="post card mb-5">
+        <div className="card-header">
+          <h2>
+            <a href={"/post/" + post.id}>{post.title}</a>
+          </h2>
+          <p>
+            <span>By </span>
+            {post.authors.map((user, index) => (
+              // Add a comma after each user's name except the last two, which should have "and" before the last name
+              <span>
+                <a href={"/user/" + users[user].id}>{users[user].name}</a>
+                {index < post.authors.length - 2 ? ", " : ""}
+                {index == post.authors.length - 2 ? " and " : ""}
+              </span>
+            ))}
+          </p>
+          <p>Last updated {updatedTime}</p>
+          <p>Published {publishedTime}</p>
+          <p>
+            <span>Topics: </span>
+            {post.topics.map((topic, index) => (
+              // Add a comma after each topic except the last two, which should have "and" before the last topic
+              <span>
+                <a href={"/topic/" + topics[topic].id}>{topics[topic].name}</a>
+                {index < post.topics.length - 2 ? ", " : ""}
+                {index == post.topics.length - 2 ? " and " : ""}
+              </span>
+            ))}
+          </p>
+        </div>
+        <div className="card-body">
+          <p>
+            {post.content.substring(0, 100)}
+            {post.content.length > 100 ? "..." : ""}
+          </p>
+        </div>
       </div>
     );
   });
