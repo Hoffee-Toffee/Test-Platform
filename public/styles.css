@@ -144,6 +144,23 @@ a:hover {
     background-color: var(--menu-link);
 }
 
+#cover {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+footer {
+    z-index: 1 !important;
+}
+
 /* For mobile */
 @media (max-width: 500px) {
     /* Turn nav ul into menu */
@@ -151,8 +168,8 @@ a:hover {
         display: flex;
         position: absolute;
         width: 0;
-        height: 11em;
-        top: 3.5em;
+        height: 15.5em;
+        top: 0em;
         right: 0em;
         flex-direction: column;
         align-items: flex-end;
@@ -161,7 +178,8 @@ a:hover {
         pointer-events: none;
         overflow: hidden;
         opacity: 1;
-        z-index: 1;
+        z-index: 2;
+        padding-top: 3.5em;
     }
 
     #nav-toggle ~ .navbar-nav li {
@@ -174,6 +192,7 @@ a:hover {
     /* Show hamburger menu */
     #hamburger {
         display: flex;
+        z-index: 3;
     }
 
     /* Show nav ul */
@@ -186,5 +205,11 @@ a:hover {
         transform: translateX(0%);
         opacity: 1;
         transition: opacity 0.5s, transform 0.5s;
+    }
+
+    /* Show the cover when the menu is open */
+    #nav-toggle:checked ~ #cover {
+        opacity: 1;
+        pointer-events: auto;
     }
 }

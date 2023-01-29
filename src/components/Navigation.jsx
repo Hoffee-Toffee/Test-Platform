@@ -16,6 +16,7 @@ function Navigation() {
                 <span class="bar"></span>
                 <span class="bar"></span>
             </label>
+            <span id="cover"></span>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">

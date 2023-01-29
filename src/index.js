@@ -10,7 +10,6 @@ import {
   Footer,
   Home,
   Navigation,
-  Research,
   Topic,
   User
 } from "./components";
