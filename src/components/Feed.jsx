@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Feed() {
   // Check if params have been passed to the component from the parent
@@ -46,14 +47,14 @@ function Feed() {
       <div className="post card mb-5">
         <div className="card-header">
           <h2 className="card-title">
-            <a href={"/post/" + post.id}>{post.title}</a>
+            <Link to={"/post/" + post.id}>{post.title}</Link>
           </h2>
           <p>
             <span>By </span>
             {post.authors.map((user, index) => (
               // Add a comma after each user's name except the last two, which should have "and" before the last name
               <span>
-                <a href={"/user/" + users[user].id}>{users[user].name}</a>
+                <Link to={"/user/" + users[user].id}>{users[user].name}</Link>
                 {index < post.authors.length - 2 ? ", " : ""}
                 {index == post.authors.length - 2 ? " and " : ""}
               </span>
@@ -65,7 +66,7 @@ function Feed() {
             {post.topics.map((topic, index) => (
               // Add a comma after each topic except the last two, which should have "and" before the last topic
               <span>
-                <a href={"/topic/" + topics[topic].id}>{topics[topic].name}</a>
+                <Link to={"/topic/" + topics[topic].id}>{topics[topic].name}</Link>
                 {index < post.topics.length - 2 ? ", " : ""}
                 {index == post.topics.length - 2 ? " and " : ""}
               </span>

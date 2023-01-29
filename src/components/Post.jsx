@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router";
 import { default as Comments } from "./Comments";
+import { Link } from "react-router-dom";
 
 function Post() {
   let { postSlug } = useParams();
@@ -56,7 +57,7 @@ function Post() {
           {post.authors.map((user, index) => (
             // Add a comma after each user's name except the last two, which should have "and" before the last name
             <span>
-              <a href={"/user/" + users[user].id}>{users[user].name}</a>
+              <Link to={"/user/" + users[user].id}>{users[user].name}</Link>
               {index < post.authors.length - 2 ? ", " : ""}
               {index == post.authors.length - 2 ? " and " : ""}
             </span>
@@ -69,7 +70,7 @@ function Post() {
           {post.topics.map((topic, index) => (
             // Add a comma after each topic except the last two, which should have "and" before the last topic
             <span>
-              <a href={"/topic/" + topics[topic].id}>{topics[topic].name}</a>
+              <Link to={"/topic/" + topics[topic].id}>{topics[topic].name}</Link>
               {index < post.topics.length - 2 ? ", " : ""}
               {index == post.topics.length - 2 ? " and " : ""}
             </span>

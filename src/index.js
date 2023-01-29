@@ -32,3 +32,9 @@ ReactDOM.render(
 
   document.getElementById("root")
 );
+
+// Add darkMode class to html element when theme-toggle is checked
+document.getElementById('theme-toggle').addEventListener('change', e => {
+  if (e.target.checked) document.getElementsByTagName('html')[0].classList.add('darkMode');
+  else document.getElementsByTagName('html')[0].classList.remove('darkMode');
+});

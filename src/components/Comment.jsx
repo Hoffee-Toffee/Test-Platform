@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Comment() {
     // Get the comment passed to the component from the parent
@@ -15,7 +16,7 @@ function Comment() {
         <div className="card">
             <div className="card-body">
                 <h5 className="card-title">
-                    <a href={`/user/${comment.author}`}>{users[comment.author].name}</a>
+                    <Link to={`/user/${comment.author}`}>{users[comment.author].name}</Link>
                 </h5>
                 <p className="card-text">{comment.content}</p>
             </div>

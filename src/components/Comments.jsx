@@ -1,5 +1,4 @@
 import React from "react";
-import { useParams } from "react-router";
 import { default as Comment } from "./Comment";
 
 function Comments() {

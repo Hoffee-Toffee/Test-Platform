@@ -1,7 +1,7 @@
 import React from "react";
 import { default as Feed } from "./Feed";
 import { useParams } from "react-router";
-
+import { Link } from "react-router-dom";
 
 function Topic() {
   let { topicSlug } = useParams();

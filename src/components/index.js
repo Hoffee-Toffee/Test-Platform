@@ -15,5 +15,5 @@ function uncheck () {
 }
 
 // Uncheck when not clicking on the nav or when scrolling
-document.addEventListener('click', e => { if (e.target.classList.contains('nav-link') || e.target.id == 'cover') uncheck(); });
+document.addEventListener('click', e => { if (e.target.classList.contains('nav-link') || e.target.id === 'cover') uncheck(); });
 document.addEventListener('scroll', uncheck);

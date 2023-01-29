@@ -40,6 +40,7 @@ function Navigation() {
                 </NavLink>
               </li>
             </ul>
+            <input type="checkbox" id="theme-toggle"></input>
           </div>
         </div>
       </nav>

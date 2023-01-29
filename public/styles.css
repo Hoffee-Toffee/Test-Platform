@@ -1,6 +1,9 @@
 /* DodgerBlue, Gold, ForestGreen, RebeccaPurple */
 :root {
     --main: RebeccaPurple;
+    --main-light: #b39ddb;
+    --main-dark: #7c4dff;
+
     --link: DodgerBlue;
     --link-hover: ForestGreen;
     --menu-link: Gold;
@@ -159,6 +162,25 @@ a:hover {
 
 footer {
     z-index: 1 !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: var(--main-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-light);
+    border-radius: 0.5em;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 4.7em;
+    right: 1.2em;
+    z-index: 2;
+    cursor: pointer;
 }
 
 /* For mobile */
