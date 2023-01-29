@@ -17,3 +17,10 @@ function uncheck () {
 // Uncheck when not clicking on the nav or when scrolling
 document.addEventListener('click', e => { if (e.target.classList.contains('nav-link') || e.target.id === 'cover') uncheck(); });
 document.addEventListener('scroll', uncheck);
+
+// Scroll to the top of the page whenever a link is pressed
+document.addEventListener('click', e => {
+    if (e.target.tagName === 'A') {
+        window.scrollTo(0, 0);
+    }
+});
