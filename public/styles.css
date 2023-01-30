@@ -24,8 +24,8 @@ html.darkMode .card {
     border-color: #a9a9a9;
 }
 
-html.darkMode .col-12 {
-    border-left: 1px solid #f8f9fa;
+html.darkMode .col-12 > .col-12 {
+    border-left: 1px solid #4d4d4d;
 }
 
 
@@ -101,7 +101,7 @@ html.darkMode .col-12 {
     margin-top: 1em;
 }
 
-.col-12 {
+.col-12 > .col-12 {
     padding-right: 0;
     border-left: 1px solid #e9ecef;
 }
